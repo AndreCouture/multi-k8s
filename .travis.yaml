@@ -19,7 +19,7 @@ before_install:
     - docker build -t andrecouture/react-test -f client/Dockerfile.dev ./client
 
 script:
-    - docker run -e CI=true andre.couture/react-test npm run test -- --coverage
+    - docker run -e CI=true andre.couture/react-test npm run test
 
 deploy:
     provider: script
