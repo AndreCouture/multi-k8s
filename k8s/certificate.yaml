@@ -9,10 +9,12 @@ spec:
         kind: ClusterIssuer
     commonName: k8s.gymphotos.ca
     dnsnames:
+        - gymphotos.ca
         - k8s.gymphotos.ca
     acme:
         config:
             - http01:
                 ingressClass: nginx
               domains:
+                - gymphotos.ca
                 - k8s.gymphotos.ca
