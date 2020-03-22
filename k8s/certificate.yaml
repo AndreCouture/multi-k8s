@@ -1,0 +1,19 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+    name: k8s-gymphotos-ca-tls
+spec:
+    secretName: k8s-gymphotos-ca
+    issuerRef:
+        name: letsencrypt-prod
+        kind: ClusterIssuer
+    commonName: k8s.gymphotos.ca
+    dnsnames:
+        - k8s.gymphotos.ca
+    acme:
+        config:
+            - http01:
+                ingressClass: nginx
+              domains:
+                - k8s.gymphotos.ca
+                
