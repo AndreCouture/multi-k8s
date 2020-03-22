@@ -1,4 +1,4 @@
-apiVersion: certmanager.k8s.io/v1alpha1
+apiVersion: certmanager.k8s.io/v1beta1
 kind: Certificate
 metadata:
     name: k8s-gymphotos-ca-tls
@@ -16,4 +16,3 @@ spec:
                 ingressClass: nginx
               domains:
                 - k8s.gymphotos.ca
-                
